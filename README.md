@@ -5,8 +5,8 @@ Hack the other's Solutions or Find logical errors and bugs by generating the pla
 ## How it works
 * Extension takes two source files(**correct solution** and **wrong solution**)
 * Random inputs are generated using **generator file**.
-* both source files run on these input
-* output is compared using **checker** 
+* Both source files run on these inputs
+* Output is compared using **checker** 
 * Read more about **generators** [here](https://codeforces.com/blog/entry/18291)
 
 ## Features
@@ -21,7 +21,7 @@ Hack the other's Solutions or Find logical errors and bugs by generating the pla
 ## How to start
 1. open any workspace
 2. open **Command Palette(```Ctrl + Shift + P```)**
-3. search for ```HTS : Start the Hack```
+3. search for **```HTS : Start the Hack```**
     
     ![command palette](screenshot/command_palette.png)
 4. Give relative path from workspace to source files 
@@ -35,7 +35,8 @@ Hack the other's Solutions or Find logical errors and bugs by generating the pla
 ## Extension Settings
 
 **1. Max Tests :**  Maximum number of testcases to run. Default 50
-**2. Time Out :** TimeLimit for a souce code to run in millisecond
+
+**2. Time Out :** TimeLimit for a souce code to run in millisecond. Default 2000
 
 
 
