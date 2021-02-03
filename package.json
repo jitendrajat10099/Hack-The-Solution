@@ -5,6 +5,7 @@
 	"author": {
 		"name": "Jitendra Jat"
 	},
+	"publisher": "JitendraJat10099",
 	"repository": {
 		"url": "https://github.com/jitendrajat10099/Hack-The-Solution"
 	},
@@ -95,8 +96,23 @@
 					]
 				}
 			}
-		}
+		},
+		"keybindings":[
+			{
+				"command": "hts.startHack",
+				"key": "ctrl+alt+h"
+			},
+			{
+				"command": "hts.startHackPre",
+				"key": "ctrl+alt+r"
+			}
+		]
 	},
+	
+	"keywords": [
+		"codeforces",
+		"competitive programming"
+	],
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
