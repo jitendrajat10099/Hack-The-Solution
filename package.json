@@ -1,0 +1,119 @@
+{
+	"name": "hack-the-solution",
+	"displayName": "hack-the-solution(Competitive Programming)",
+	"description": "Hack the other Solutions or Find logical errors and bugs by generating the random testcases",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "hts.startHack",
+				"title": "Hts : Start the Hack"
+			},
+			{
+				"command": "hts.startHackPre",
+				"title": "Hts : Start the Hack with previous input"
+			}
+		],
+		"configuration": {
+			"title": "Hack The Solution",
+			"properties": {
+				"hts.general.timeOut": {
+					"type": "number",
+					"default": "2000",
+					"minimum": 500,
+					"maximum": 5000,
+					"description": "The time in ms for which a testcase is run before it is killed ( timed-out )."
+				},
+				"hts.general.maxTests" : {
+					"type" : "number",
+					"default" : 50,
+					"minimun" : 1,
+					"maximum": 200,
+					"description": "Maximum number of testcases to run"
+ 				},
+				"hts.path.correctSolution": {
+					"type": "string",
+					"default": "/correct.cpp",
+					"description": "path to correct solution cpp file"
+				},
+				"hts.path.wrongSolution": {
+					"type": "string",
+					"default": "/wa.cpp",
+					"description": "path to wrong solution cpp file"
+				},
+				"hts.path.generatorFile": {
+					"type": "string",
+					"default": "/gen.cpp",
+					"description": "path to generator file"
+				},
+				"hts.generator.argument": {
+					"type": "string",
+					"default": "",
+					"description": "addition argument for running generator"
+				},
+				"hts.checker": {
+					"type": "string",
+					"default": "fcmp.cpp",
+					"description": "path to wrong solution cpp file",
+					"enum": [
+						"fcmp.cpp",
+						"lcmp.cpp",
+						"ncmp.cpp",
+						"wcmp.cpp",
+						"nyesno.cpp",
+						"yesno.cpp",
+						"rcmp4.cpp",
+						"rcmp6.cpp",
+						"rcmp9.cpp"
+					],
+					"enumDescriptions": [
+						"compare files as sequence of lines, doesn't ignore whitespaces",
+						"compare files as sequence of tokens in lines,ignore whitespaces",
+						"compare ordered sequences of signed int64 numbers",
+						"compare sequences of tokens",
+						"multiple yes/no, case insensetive",
+						"single yes/no, case insensetive",
+						"compare two sequences of doubles, max absolute or relative error = 1E-4",
+						"compare two sequences of doubles, max absolute or relative error = 1E-6",
+						"compare two sequences of doubles, max absolute or relative error = 1E-9"
+					]
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"fs-extra": "^9.1.0",
+		"tree-kill": "^1.2.2"
+	}
+}
