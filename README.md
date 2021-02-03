@@ -23,10 +23,10 @@ Hack the other's Solutions or Find logical errors and bugs by generating the pla
 2. open **Command Palette(```Ctrl + Shift + P```)**
 3. search for **`HTS : Start the Hack`** or **(`Ctrl + Alt + H`)**
     
-    ![command palette](screenshot/command_palette.png)
+    ![command palette](https://github.com/jitendrajat10099/Hack-The-Solution/raw/main/screenshot/command_palette.png)
 4. Give relative path from workspace to source files 
    
-   ![taking input](screenshot/input.gif)
+    ![taking input](https://github.com/jitendrajat10099/Hack-The-Solution/raw/main/screenshot/input.gif)
 
 5. Here you go. Hack started
 6. Random testcases will be generated automatically until bug not found or maximum number of testcases reached.
