@@ -14,7 +14,7 @@ export const getSrcPath = ()=>{
         const correctConfig:string|undefined = workspace.getConfiguration('hts').get('path.correctSolution');
         const waConfig:string|undefined = workspace.getConfiguration('hts').get('path.wrongSolution');
         const genConfig:string|undefined = workspace.getConfiguration('hts').get('path.generatorFile');
-        const checkerConfig:string|undefined = workspace.getConfiguration('hts').get('checker');
+        const checkerConfig:string|undefined = workspace.getConfiguration('hts').get('path.checker');
         const folders = workspace.workspaceFolders;
         if(!folders){
             reject(new Error('No workspace is open'));
@@ -77,6 +77,6 @@ export const updateConfig =
         await workspace.getConfiguration('hts').update('path.correctSolution',correctConfig,false);
         await workspace.getConfiguration("hts").update('path.wrongSolution',waConfig,false);
         await workspace.getConfiguration("hts").update('path.generatorFile',genConfig,false);
-        await workspace.getConfiguration("hts").update('checker',checkerConfig,false);
+        await workspace.getConfiguration("hts").update('path.checker',checkerConfig,false);
         await workspace.getConfiguration("hts").update('generator.argument',optionalParamsConfig,false);
     };

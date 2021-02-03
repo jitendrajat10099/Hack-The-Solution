@@ -62,6 +62,10 @@ const judge = async(execChecker:string,inputFile:string,outputFile:string,answer
     }catch(e){
         outputChannel.appendLine('Bug found : ');
         outputChannel.appendLine(`Test ${index} : ${e.stderr}`);
+        outputChannel.appendLine(`input for test${index} : ${inputFile}`);
+        outputChannel.appendLine(`wrong output for test ${index} : ${outputFile}`);
+        outputChannel.appendLine(`correct output for test ${index} : ${answerFile}`);
+        outputChannel.appendLine('');
         throw new Error();
     }
 };
