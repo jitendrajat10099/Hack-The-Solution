@@ -21,7 +21,7 @@ Hack the other's Solutions or Find logical errors and bugs by generating the pla
 ## How to start
 1. open any workspace
 2. open **Command Palette(```Ctrl + Shift + P```)**
-3. search for **`HTS : Start the Hack`(`Ctrl + Alt + H`)**
+3. search for **`HTS : Start the Hack`** or **(`Ctrl + Alt + H`)**
     
     ![command palette](screenshot/command_palette.png)
 4. Give relative path from workspace to source files 
